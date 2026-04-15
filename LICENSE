@@ -1,21 +1,41 @@
-MIT License
+Simple Link Copy - Custom License
 
-Copyright (c) 2026 KinaPPP
+Copyright (c) 2026 KINA
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+【利用条件】
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+1. 個人利用のみ許可します。商用利用および金銭的利益を目的とした利用は禁止します。
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+2. 改良・改善・改変は自由に行えます。ただし、改変版を配布する場合も本ライセンスの
+   条件をそのまま引き継ぐものとします。
+
+3. 本ソフトウェアはAI（Claude / Anthropic）を利用して開発されています。
+   改変版を配布する際も、AIを利用して開発・改変されている旨を明記してください。
+
+4. 本ソフトウェアは現状のまま提供されます。作者は本ソフトウェアの使用によって
+   生じたいかなる損害についても責任を負いません。
+
+【禁止事項】
+
+- 商用利用（企業・団体での業務利用、販売、有償サービスへの組み込みなど）
+- 金銭的利益を目的とした利用・配布
+- AI利用の事実を隠した再配布
+
+---
+
+Simple Link Copy - Custom License
+
+Copyright (c) 2026 KINA
+
+Permission is granted for personal use only.
+
+1. Personal use only. Commercial use and use for monetary gain are prohibited.
+
+2. Modification and improvement are permitted. Redistributed modified versions
+   must carry the same license terms.
+
+3. This software was developed using AI (Claude / Anthropic). Any redistributed
+   version must clearly state that AI was used in its development or modification.
+
+4. This software is provided "as is" without warranty of any kind. The author
+   shall not be liable for any damages arising from its use.

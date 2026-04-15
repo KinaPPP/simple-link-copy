@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic UI", sans-serif;
+      width: 380px;
+      background: #e8e8e8;
+      color: #1a1a1a;
+      padding: 14px;
+    }
+    h1 {
+      font-size: 13px;
+      font-weight: 700;
+      color: #555;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+    }
+    .preview {
+      background: #f7f7f7;
+      border: 1px solid #d0d0d0;
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin-bottom: 8px;
+      min-height: 72px;
+      white-space: pre-wrap;
+      word-break: break-all;
+      font-size: 13px;
+      line-height: 1.7;
+      color: #111;
+    }
+    .char-count { font-size: 12px; color: #888; margin-bottom: 10px; text-align: right; }
+    .char-count.warn { color: #d97706; }
+    .char-count.over { color: #dc2626; font-weight: 600; }
+    .option-row {
+      display: flex; align-items: center; gap: 10px;
+      padding: 10px 14px;
+      background: #f7f7f7; border: 1px solid #d0d0d0; border-radius: 10px;
+      cursor: pointer; user-select: none; margin-bottom: 6px;
+    }
+    .option-row:hover { background: #f0f0f0; }
+    .option-row:active { background: #e8e8e8; }
+    .toggle {
+      width: 36px; height: 20px; background: #bbb; border-radius: 10px;
+      position: relative; flex-shrink: 0; transition: background 0.2s;
+    }
+    .toggle::after {
+      content: ''; position: absolute; width: 16px; height: 16px;
+      background: #fff; border-radius: 50%; top: 2px; left: 2px;
+      transition: left 0.2s; box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+    }
+    .toggle.active { background: #4a8ce0; }
+    .toggle.active::after { left: 18px; }
+    .option-label { flex: 1; }
+    .option-label strong { display: block; color: #1a1a1a; font-size: 14px; margin-bottom: 2px; }
+    .option-label span { font-size: 12px; color: #888; }
+    .site-name-preview { font-size: 12px; color: #999; margin: -2px 0 10px 14px; word-break: break-all; min-height: 16px; }
+    .btn-copy {
+      width: 100%; padding: 12px; background: #4a8ce0; color: #fff;
+      border: none; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer;
+      transition: background 0.15s;
+    }
+    .btn-copy:hover { background: #3a7bd5; }
+    .btn-copy:active { background: #2d6abf; }
+    .btn-copy.copied { background: #2e9e6b; }
+  </style>
+</head>
+<body>
+  <h1>シンプルリンクコピー <span style="font-weight:400;color:#aaa;font-size:11px;">ver 1.5</span></h1>
+  <div id="mode-badge" style="display:none;font-size:12px;color:#2e7d32;background:#e8f5e9;border:1px solid #a5d6a7;border-radius:6px;padding:5px 10px;margin-bottom:8px;font-weight:600;"></div>
+  <div class="preview" id="preview-text">読み込み中...</div>
+  <div class="char-count" id="char-count"></div>
+  <div class="option-row" id="omit-toggle-row">
+    <div class="toggle" id="omit-toggle"></div>
+    <div class="option-label">
+      <strong>サイト名を省略</strong>
+      <span>末尾の「 « サイト名」「 | サイト名」などを除去</span>
+    </div>
+  </div>
+  <div class="site-name-preview" id="site-name-preview"></div>
+  <button class="btn-copy" id="btn-copy">コピー</button>
+  <script src="popup.js"></script>
+</body>
+</html>
