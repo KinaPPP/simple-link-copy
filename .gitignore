@@ -1,0 +1,14 @@
+# Windows
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+
+# ZIP
+*.zip
+
+# エディタ
+.vscode/
+*.swp
