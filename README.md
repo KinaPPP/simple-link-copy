@@ -27,6 +27,11 @@ Twitter / Bluesky などへの投稿リンクを素早く作るために設計�
 - **コピー後に自動で閉じる**  
   コピー完了後800ms後にポップアップが自動的に閉じます。
 
+- **PlayStation Store専用：画像のコピー＆保存（v1.6）**  
+  `store.playstation.com` のページを開いている時だけ、ポップアップ下部に画像操作が表示されます（他のサイトでは非表示）。  
+  商品画像の切り替え、画像をクリップボードにコピー、PNGとして保存ができます。  
+  ※青い「コピー」ボタンはテキストとURLのみをコピーします。画像は別ボタンです。
+
 ---
 
 ## インストール方法
@@ -48,6 +53,7 @@ Chrome Web Storeには未公開です。手動インストールが必要です�
 - 現在のタブのページタイトル
 - 現在のタブのURL
 - ページ上で選択されたテキスト（選択時のみ）
+- PlayStation Storeのページ内の商品画像（`image.api.playstation.com`から取得。PSストア閲覧時のみ）
 
 **外部サーバーへのデータ送信は一切行いません。**
 
@@ -57,6 +63,7 @@ Chrome Web Storeには未公開です。手動インストールが必要です�
 
 | バージョン | 内容 |
 |---|---|
+| 1.6 | PlayStation Store上でのみ画像のコピー／保存機能を表示、拡張機能の詳細ページにGitHubリンク（homepage_url）を追加。追加権限: `downloads`、`https://image.api.playstation.com/*` |
 | 1.5 | タイトル内括弧`[...]`でのセパレータ誤検出を修正 |
 | 1.4 | セパレータに全角パイプ「｜」を追加（FNN等に対応） |
 | 1.3 | 文字数を全角換算140字ベース表示に変更 |
@@ -68,11 +75,8 @@ Chrome Web Storeには未公開です。手動インストールが必要です�
 
 ## ライセンス
 
-[LICENSE](LICENSE) を参照してください。
+MIT License です。詳細は [LICENSE](LICENSE) を参照してください。
 
-- 個人利用のみ
-- 商用利用・金銭目的の利用は禁止
-- 改良・改変・再配布は同ライセンス条件のもとで自由
 - **本ソフトウェアはAI（Claude / Anthropic）を利用して開発されています**
 
 ---
@@ -82,8 +86,3 @@ Chrome Web Storeには未公開です。手動インストールが必要です�
 本ソフトウェアは [Claude](https://claude.ai)（Anthropic）を利用して開発されました。  
 作者: KINA
 
-
-## v1.6
-- PlayStation Store (`store.playstation.com`) 上でのみ、画像のコピー／保存機能を表示（他のサイトでは非表示）
-- 拡張機能の詳細ページにGitHubへのリンク（homepage_url）を追加
-- 追加権限: `downloads`、`https://image.api.playstation.com/*`
