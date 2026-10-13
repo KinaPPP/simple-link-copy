@@ -65,10 +65,26 @@
     .btn-copy:hover { background: #3a7bd5; }
     .btn-copy:active { background: #2d6abf; }
     .btn-copy.copied { background: #2e9e6b; }
+    #ps-section { display: none; }
+    .image-card { background:#f7f7f7; border:1px solid #d0d0d0; border-radius:10px; padding:10px; display:flex; gap:10px; }
+    .image-thumb-wrap { width:120px; height:120px; flex-shrink:0; border-radius:8px; background:#d8d8d8; border:1px solid #c8c8c8; overflow:hidden; }
+    .image-thumb { width:100%; height:100%; object-fit:cover; display:none; }
+    .image-side { flex:1; min-width:0; display:flex; flex-direction:column; justify-content:space-between; gap:6px; }
+    .image-nav { display:flex; align-items:center; justify-content:center; gap:6px; }
+    .image-info { font-size:12px; color:#555; min-width:44px; text-align:center; }
+    .nav-btn { width:30px; height:30px; border-radius:8px; border:1px solid #d0d0d0; background:#fff; color:#666; font-size:16px; cursor:pointer; }
+    .nav-btn:hover:not(:disabled) { background:#4a8ce0; border-color:#4a8ce0; color:#fff; }
+    .nav-btn:disabled { opacity:0.4; cursor:default; }
+    .btn-sub { width:100%; height:32px; background:#fff; color:#444; border:1px solid #d0d0d0; border-radius:8px; font-size:13px; cursor:pointer; }
+    .btn-sub:hover:not(:disabled) { background:#f0f0f0; }
+    .btn-sub:disabled { color:#bbb; cursor:default; }
+    #img-status { font-size:12px; color:#888; text-align:center; min-height:16px; margin-top:4px; }
+    #img-status.error { color:#dc2626; }
+    #img-status.success { color:#218838; }
   </style>
 </head>
 <body>
-  <h1>シンプルリンクコピー <span style="font-weight:400;color:#aaa;font-size:11px;">ver 1.5</span></h1>
+  <h1>シンプルリンクコピー <span style="font-weight:400;color:#aaa;font-size:11px;">ver 1.6</span></h1>
   <div id="mode-badge" style="display:none;font-size:12px;color:#2e7d32;background:#e8f5e9;border:1px solid #a5d6a7;border-radius:6px;padding:5px 10px;margin-bottom:8px;font-weight:600;"></div>
   <div class="preview" id="preview-text">読み込み中...</div>
   <div class="char-count" id="char-count"></div>
@@ -81,6 +97,22 @@
   </div>
   <div class="site-name-preview" id="site-name-preview"></div>
   <button class="btn-copy" id="btn-copy">コピー</button>
+
+  <div id="ps-section" style="margin-top:10px;">
+    <div class="image-card">
+      <div class="image-thumb-wrap"><img id="image-thumb" class="image-thumb" alt="画像プレビュー"></div>
+      <div class="image-side">
+        <div class="image-nav">
+          <button id="img-prev" class="nav-btn" title="前の画像">‹</button>
+          <span id="image-info" class="image-info"></span>
+          <button id="img-next" class="nav-btn" title="次の画像">›</button>
+        </div>
+        <button id="btn-img-copy" class="btn-sub">画像をコピー</button>
+        <button id="btn-img-save" class="btn-sub">画像を保存</button>
+      </div>
+    </div>
+    <div id="img-status"></div>
+  </div>
   <script src="popup.js"></script>
 </body>
 </html>

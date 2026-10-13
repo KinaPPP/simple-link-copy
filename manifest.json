@@ -2,7 +2,8 @@
   "manifest_version": 3,
   "name": "シンプルリンクコピー",
   "description": "ページタイトルとURLをシンプルにコピー",
-  "version": "1.5",
+  "homepage_url": "https://github.com/KinaPPP/simple-link-copy",
+  "version": "1.6",
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
@@ -11,7 +12,8 @@
       "128": "icon128.png"
     }
   },
-  "permissions": ["activeTab", "scripting", "storage"],
+  "permissions": ["activeTab", "scripting", "storage", "downloads"],
+  "host_permissions": ["https://image.api.playstation.com/*"],
   "icons": {
     "16": "icon16.png",
     "48": "icon48.png",

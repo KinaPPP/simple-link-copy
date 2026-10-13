@@ -81,3 +81,9 @@ Chrome Web Storeには未公開です。手動インストールが必要です�
 
 本ソフトウェアは [Claude](https://claude.ai)（Anthropic）を利用して開発されました。  
 作者: KINA
+
+
+## v1.6
+- PlayStation Store (`store.playstation.com`) 上でのみ、画像のコピー／保存機能を表示（他のサイトでは非表示）
+- 拡張機能の詳細ページにGitHubへのリンク（homepage_url）を追加
+- 追加権限: `downloads`、`https://image.api.playstation.com/*`
